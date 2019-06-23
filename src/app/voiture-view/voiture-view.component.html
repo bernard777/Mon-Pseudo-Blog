@@ -1,0 +1,13 @@
+<div class="cols-xs-12">
+  <h2 style="margin-bottom: 20px">Catalogue des voitures de serie les plus rapide du monde</h2>
+  <ul class="list-group">
+    <app-voiture *ngFor="let voiture of voitures"
+                  [marqueModel]="voiture.marqueModel"
+                  [commentaire]="voiture.commentaire"
+                  [vitesseMax]="voiture.vitesseMax"
+                  [nombreExem]="voiture.nombredexemplaire"
+                  [date]="voiture.date"
+                  [id]="voiture.id"></app-voiture>
+  </ul>
+  <button class="btn btn-primary" (click)="onAddVoiture()">Ajouter une voiture</button>
+</div>
